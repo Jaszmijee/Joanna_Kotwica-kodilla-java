@@ -1,6 +1,7 @@
 package com.kodilla.testing.collection;
 
 import org.junit.jupiter.api.*;
+
 import java.util.*;
 
 public class CollectionTestSuite {
@@ -19,7 +20,7 @@ public class CollectionTestSuite {
             ", then the exterminate method should return an empty list")
 
     @Test
-    void testOddNumbersExterminatorEmptyList(){
+    void testOddNumbersExterminatorEmptyList() {
         //Given
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
         Integer[] array = {};
@@ -36,15 +37,15 @@ public class CollectionTestSuite {
             "to the exterminate method, then the exterminate method should return List of even numbers only")
 
     @Test
-    void testOddNumbersExterminatorNormalList(){
+    void testOddNumbersExterminatorNormalList() {
         //Given
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
-        Integer[] array = {1,2,3,4,5,6,7,8,9,10};
+        Integer[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         List<Integer> list = new ArrayList<>(Arrays.asList(array));
         //When
         System.out.println("Testing case: " + list);
         List<Integer> result = oddNumbersExterminator.exterminate(list);
-        List<Integer> expectedResult = new ArrayList<>(Arrays.asList(2,4,6,8,10));
+        List<Integer> expectedResult = new ArrayList<>(Arrays.asList(2, 4, 6, 8, 10));
         //Then
         Assertions.assertEquals(expectedResult, result);
     }
@@ -53,10 +54,10 @@ public class CollectionTestSuite {
             "to the exterminate method, then the exterminate method should return an empty List")
 
     @Test
-    void testOddNumbersExterminatorOddNumbersList(){
+    void testOddNumbersExterminatorOddNumbersList() {
         //Given
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
-        Integer[] array = {1,3,5,7};
+        Integer[] array = {1, 3, 5, 7};
         List<Integer> list = new ArrayList<>(Arrays.asList(array));
         //When
         System.out.println("Testing case: " + list);
