@@ -4,10 +4,12 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.w3c.dom.NamedNodeMap;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Double.NaN;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
@@ -155,17 +157,18 @@ public class ForumStatisticsTestSuite {
             // Given
             ForumStatistics forumStatistics = new ForumStatistics();
             // When
-            StringBuilder sb = new StringBuilder();
-            sb.append("Forum statistics:").append("\nUsers: ").append(forumStatistics.getUserNamesCount()).
-                    append("Number of posts: ").append(forumStatistics.getPostsCount()).
-                    append("Number of comments: ").append(forumStatistics.getCommentsCount()).
-                    append("Comments per User: ").append(forumStatistics.getAverageCommentsPerUser()).
-                    append("Posts per User: ").append(forumStatistics.getAverageCommentsPerUser()).
-                    append("Comments per Count: ").append(forumStatistics.getAverageCommentsPerPost());
-            String result = forumStatistics.showStatistics();
-            // Then
-
-            assertEquals(sb.toString(), result);
+           String resultString = forumStatistics.showStatistics(statisticsMock);
+           StringBuilder expected = new StringBuilder();
+           expected.append("Forum statistics:").append("\nUsers: ").append(0).
+                    append("Number of posts: ").append(0).
+                    append("Number of comments: ").append(0).
+                    append("Comments per User: ").append(NaN).
+                    append("Posts per User: ").append(NaN).
+                    append("Comments per Count: ").append(NaN);
+           String expectedString = expected.toString();
+           // Then
+            assertEquals(expectedString, resultString);
         }
     }
 }
+
