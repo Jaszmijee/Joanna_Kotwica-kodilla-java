@@ -2,11 +2,10 @@ package com.kodilla.testing.forum.statistics;
 
 public class ForumStatistics {
 
-    private Statistics statistics;
-
-    public ForumStatistics(Statistics statistics) {
-        this.statistics = statistics;
-    }
+    /*
+    Prawda, Statistics statistics jest przekazywane do metody.
+    ForumStatistics nie potrzebuje zmiennej Statistics statistics.
+    */
 
     private int userNamesCount;
     private int postsCount;
@@ -14,10 +13,6 @@ public class ForumStatistics {
     private double averagePostsPerUser;
     private double averageCommentsPerUser;
     private double averageCommentsPerPost;
-
-    public Statistics getStatistics() {
-        return statistics;
-    }
 
     public int getUserNamesCount() {
         return userNamesCount;

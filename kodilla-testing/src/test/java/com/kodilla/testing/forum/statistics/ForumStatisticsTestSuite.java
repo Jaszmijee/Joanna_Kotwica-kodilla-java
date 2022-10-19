@@ -16,7 +16,7 @@ public class ForumStatisticsTestSuite {
 
     @BeforeAll
     public static void before() {
-        System.out.println("Starting Testg");
+        System.out.println("Starting Tests");
     }
 
     private static int counter = 0;
@@ -44,7 +44,7 @@ public class ForumStatisticsTestSuite {
         @Test
         public void testCalculateAdvStatistics0Posts() {
             // Given
-            ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+            ForumStatistics forumStatistics = new ForumStatistics();
             int posts = 0;
             when(statisticsMock.postsCount()).thenReturn(posts);
             // When
@@ -56,7 +56,7 @@ public class ForumStatisticsTestSuite {
 
         @Test
         public void testCalculateAdvStatistics1000Posts() {
-            ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+            ForumStatistics forumStatistics = new ForumStatistics();
             when(statisticsMock.postsCount()).thenReturn(1000);
             // When
             forumStatistics.calculateAdvStatistics(statisticsMock);
@@ -68,7 +68,7 @@ public class ForumStatisticsTestSuite {
 
         @Test
         public void testCalculateAdvStatistics0Comments() {
-            ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+            ForumStatistics forumStatistics = new ForumStatistics();
             when(statisticsMock.commentsCount()).thenReturn(0);
             // When
             forumStatistics.calculateAdvStatistics(statisticsMock);
@@ -80,7 +80,7 @@ public class ForumStatisticsTestSuite {
 
         @Test
         public void testCalculateAdvStatisticsWhenCommentsMoreThanPosts() {
-            ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+            ForumStatistics forumStatistics = new ForumStatistics();
             int mockCommentsCount = 15;
             int mockPostCount = 2;
             when(statisticsMock.commentsCount()).thenReturn(mockCommentsCount);
@@ -95,7 +95,7 @@ public class ForumStatisticsTestSuite {
 
         @Test
         public void testCalculateAdvStatisticsWhenCommentsLessThanPosts() {
-            ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+            ForumStatistics forumStatistics = new ForumStatistics();
             int mockCommentsCount = 4;
             int mockPostCount = 8;
             when(statisticsMock.commentsCount()).thenReturn(mockCommentsCount);
@@ -110,7 +110,7 @@ public class ForumStatisticsTestSuite {
 
         @Test
         public void testCalculateAdvStatistics0Users() {
-            ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+            ForumStatistics forumStatistics = new ForumStatistics();
             List<String> userName = new ArrayList<>();
             int mockCommentsCount = 4;
             int mockPostsCount = 8;
@@ -128,7 +128,7 @@ public class ForumStatisticsTestSuite {
 
         @Test
         public void testCalculateAdvStatistics100Users() {
-            ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+            ForumStatistics forumStatistics = new ForumStatistics();
             List<String> userName = generateUserNames(100);
             int mockCommentsCount = 4;
             int mockPostCount = 8;
@@ -153,7 +153,7 @@ public class ForumStatisticsTestSuite {
         @Test
         public void testShowStatistics() {
             // Given
-            ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+            ForumStatistics forumStatistics = new ForumStatistics();
             // When
             StringBuilder sb = new StringBuilder();
             sb.append("Forum statistics:").append("\nUsers: ").append(forumStatistics.getUserNamesCount()).
