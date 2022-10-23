@@ -1,17 +1,25 @@
 package com.kodilla.stream;
 
-import com.kodilla.stream.beautifier.AdditionalPoemBeautifier;
-import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.forumuser.Forum;
+import com.kodilla.stream.forumuser.ForumUser;
+
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class StreamMain {
 
     public static void main(String[] args) {
+        Forum usersOnForum = new Forum();
+        Map<Integer, ForumUser> selectedUsers;
+        selectedUsers = usersOnForum.getUserList().stream()
+                .filter(forumUser -> forumUser.getSex() == 'M')
+                .filter(forumUser -> forumUser.getDateOfBirth().getYear() <= 2002)
+                .filter(forumUser -> forumUser.getPostNumber() > 0)
+                .collect(Collectors.toMap(ForumUser::getUserID, forumUser -> forumUser));
 
-        PoemBeautifier poemBeautifier = new PoemBeautifier();
-        poemBeautifier.beautify("\uD83D\uDC13", "chicken", (a, b) -> a + " " + b + " " + a);
-        poemBeautifier.beautify("\"\\uD83D\\uDC13\"", "works for UTF-16 but unfortunately I don't know how to make to work here \uD83D\uDE14".substring(0, 16), (a, b) -> a + " " + b);
-        poemBeautifier.beautify("snake! ".toUpperCase(), "badger ", ((beautifier, input) -> input + input + input + input + beautifier + beautifier));
-        poemBeautifier.beautify("The lambda expression is a true", "Inception ".replace(" ", "!!!"), AdditionalPoemBeautifier::canIDoThat);
+        System.out.println("Selected Users: ");
+        selectedUsers.entrySet().stream().map(entry -> entry.getKey() + " " + entry.getValue())
+                .forEach(entry -> System.out.println(entry));
     }
 }
 
