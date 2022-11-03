@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Allegro_OrdersRepositoryImpl implements OrdersRepository {
 
-    Map<String, Order> allegroRepository = new HashMap<>();
+    private Map<String, Order> allegroRepository = new HashMap<>();
 
     public void addOrder(Order order) {
 
