@@ -2,7 +2,7 @@ package com.kodilla.good.patterns.food2door;
 
 public class ExtraFoodShop extends FoodProducer {
 
-    public ExtraFoodShop(String producerName, int orderingNumber, int quantity) {
+    public ExtraFoodShop(int orderingNumber, int quantity) {
         super("ExtraFoodShop", orderingNumber, quantity);
     }
 

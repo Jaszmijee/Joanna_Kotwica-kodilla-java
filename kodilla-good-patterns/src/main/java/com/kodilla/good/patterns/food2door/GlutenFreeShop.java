@@ -4,7 +4,7 @@ public class GlutenFreeShop extends FoodProducer {
 
     private final boolean hasACat;
 
-    public GlutenFreeShop(String producerName, int orderingNumber, int quantity, boolean hasACat) {
+    public GlutenFreeShop(int orderingNumber, int quantity, boolean hasACat) {
         super("GlutenFreeShop", orderingNumber, quantity);
         this.hasACat = hasACat;
     }

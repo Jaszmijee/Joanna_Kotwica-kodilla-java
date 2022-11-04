@@ -4,7 +4,7 @@ public class HealthyShop extends FoodProducer {
 
     private final User user;
 
-    public HealthyShop(final User user, final String producerName, final int orderingNumber, final int quantity) {
+    public HealthyShop(final User user, final int orderingNumber, final int quantity) {
         super("HealthyShop", orderingNumber, quantity);
         this.user = user;
     }
