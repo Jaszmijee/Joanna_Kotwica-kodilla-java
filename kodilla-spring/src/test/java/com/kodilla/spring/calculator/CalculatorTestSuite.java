@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class CalculatorTestSuite {
 
     @Autowired
-    Calculator calculator = new Calculator();
+    Calculator calculator;
 
     @Autowired
     private Display display;

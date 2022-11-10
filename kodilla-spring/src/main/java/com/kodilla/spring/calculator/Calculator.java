@@ -27,7 +27,7 @@ public class Calculator {
         if ((ofA.subtract(ofB).compareTo(BigDecimal.valueOf(Double.MAX_VALUE)) > 0) || ((ofA.subtract(ofB)).compareTo(BigDecimal.valueOf(-(Double.MAX_VALUE))) < 0)) {
             throw new IllegalArgumentException("Input numbers out of range for performing reliable calculations");
         }
-        display.displayValue(a + b);
+        display.displayValue(a - b);
         return a - b;
     }
 
