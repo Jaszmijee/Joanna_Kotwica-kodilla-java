@@ -1,0 +1,30 @@
+package com.kodilla.spring.portfolio;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class BoardConfig {
+
+    @Bean
+    public Board getBoard() {
+        return new Board(getToDoList(), getInProgressList(), getDoneList());
+    }
+
+    @Bean(name = "toDoList")
+    public TaskList getToDoList() {
+        return new TaskList("toDoList");
+    }
+
+    @Bean(name = "inProgressList")
+    public TaskList getInProgressList() {
+        return new TaskList("inProgressList");
+    }
+
+    @Bean(name = "doneList")
+    public TaskList getDoneList() {
+        return new TaskList("doneList");
+    }
+}
+
+
