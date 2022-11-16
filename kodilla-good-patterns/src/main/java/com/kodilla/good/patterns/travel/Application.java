@@ -27,10 +27,12 @@ public class Application {
         flightsDB.createFlightDB(flight9);
         flightsDB.createFlightDB(flight);
 
+
+
         FlightService flightService = new FlightService(flightsDB.getConnectionsSet());
         flightService.checkConnection("waw", "prg");
         flightService.checkConnection("waw", "mon");
         flightService.checkConnection("wro", "prg");
 
-    }
+            }
 }

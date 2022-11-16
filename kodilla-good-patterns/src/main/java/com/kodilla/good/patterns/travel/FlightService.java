@@ -14,7 +14,7 @@ class FlightService {
     }
 
     public Set<Flight> getFlightsDB() {
-        return flightsDB;
+        return this.flightsDB;
     }
 
     public void checkConnection(String departureLocation, String arrivalLocation) {
@@ -35,6 +35,7 @@ class FlightService {
             List<Flight> resultArrival = flightsDB.stream().
                     filter(flight -> flight.getArrivalLocation().equalsIgnoreCase(arrivalLocation))
                     .collect(Collectors.toList());
+
 
             List<Flight> finalResult = new ArrayList<>();
             for (Flight flightsFrom : resultDeparture) {
