@@ -18,5 +18,6 @@ public class LoggerTestSuite {
     public void testGetLastLog() {
         assertNotNull(logger.getLastLog());
         assertEquals("11.1", logger.getLastLog());
+
     }
 }
