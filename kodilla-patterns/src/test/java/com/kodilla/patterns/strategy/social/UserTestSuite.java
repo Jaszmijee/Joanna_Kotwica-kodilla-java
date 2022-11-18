@@ -24,14 +24,16 @@ public class UserTestSuite {
     @DisplayName("Individual social media test")
     @Test
     public void testIndividualSharingStrategy() {
+        // Given
+        User millenialUser1 = new Millenials("millenial1");
+
         // When
         TwitterPublisher twitter = new TwitterPublisher();
-        millenialUser.setSocialPublisher(twitter);
+        millenialUser1.setSocialPublisher(twitter);
 
         // & Then
-        assertEquals(TwitterPublisher.class, millenialUser.socialPublisher.getClass());
-        assertEquals(FacebookPublisher.class, millenialUser.socialPublisher.getClass());
-    }
+        assertEquals(TwitterPublisher.class, millenialUser1.socialPublisher.getClass());
+   }
 
     @DisplayName("sharePost Test")
     @Test

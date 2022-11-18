@@ -6,4 +6,5 @@ public class ZGeneration extends User {
         super(username);
         this.socialPublisher = new SnapchatPublisher();
     }
+
 }

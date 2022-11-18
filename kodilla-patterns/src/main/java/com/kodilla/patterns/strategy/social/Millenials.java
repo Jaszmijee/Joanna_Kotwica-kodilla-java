@@ -6,4 +6,5 @@ public class Millenials extends User {
         super(username);
         this.socialPublisher = new FacebookPublisher();
     }
+
 }

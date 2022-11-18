@@ -21,5 +21,6 @@ public class User {
     public void setSocialPublisher(SocialPublisher socialPublisher) {
         this.socialPublisher = socialPublisher;
     }
+
 }
 

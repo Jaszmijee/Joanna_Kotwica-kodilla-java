@@ -6,4 +6,5 @@ public class YGeneration extends User {
         super(username);
         this.socialPublisher = new TwitterPublisher();
     }
+
 }
