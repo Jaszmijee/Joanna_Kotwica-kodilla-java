@@ -5,7 +5,7 @@ import java.util.*;
 public class PaintingTask implements Task {
 
     private final String taskName;
-    private final String color;
+    private final PaintColor color;
     private final String whatToPaint;
 
     private final Set<String> thingsToPaint = new HashSet<>(){{
@@ -14,16 +14,14 @@ public class PaintingTask implements Task {
         add("WALLS");
     }};
 
-    public PaintingTask(String taskName, String color, String whatToPaint) {
+    public PaintingTask(String taskName, PaintColor color, String whatToPaint) {
         this.taskName = taskName;
         this.color = color;
         this.whatToPaint = whatToPaint;
     }
 
     public boolean executeTask() {
-        return ((taskName != null) && (color != null) &&
-       (Arrays.asList(PaintColor.values()).toString().contains(color.toUpperCase()))
-                && (whatToPaint != null) && thingsToPaint.contains(whatToPaint.toUpperCase()));
+        return ((taskName != null) && (color != null));
     }
 
     public String getTaskName() {

@@ -11,7 +11,7 @@ public class TaskFactory {
         return switch (tasksClass) {
             case SHOPPING -> new ShoppingTask("ShoppingList", "milk", 0);
             case DRIVING -> new DrivingTask("Trasnport", "Airport", "Car");
-            case PAINTING -> new PaintingTask("Painting bedroom", "Grey", "Bedroom");
+            case PAINTING -> new PaintingTask("Painting bedroom", PaintColor.GREY, "Bedroom");
             default -> null;
         };
     }
