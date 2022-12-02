@@ -1,0 +1,41 @@
+[33mcommit 32d3a11b7632f6c44dd176b9b4dc6c046b1083b0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Jaszmijee <jaszmije@gmail.com>
+Date:   Tue Oct 18 16:28:19 2022 +0200
+
+    6.6 Added BookLibrary testing using Mockito
+
+[33mcommit 530e276aa351001d73efd8db248d593e19645ae4[m
+Author: Jaszmijee <jaszmije@gmail.com>
+Date:   Mon Oct 17 14:24:41 2022 +0200
+
+    6.5. Added WeatherForecast and WeatherForecastSuite test using Mockito
+
+[33mcommit faf5ec54fe55ce4616c854ff0095ff4a4075fd21[m
+Author: Jaszmijee <jaszmije@gmail.com>
+Date:   Sun Oct 16 14:05:38 2022 +0200
+
+    6.4 Added ShapeCollector and ShapeColletor testing using TDD
+
+[33mcommit 7f36544ab4b2fcdfc6241758841339276a83150b[m
+Author: Jaszmijee <jaszmije@gmail.com>
+Date:   Fri Oct 14 12:56:45 2022 +0200
+
+    6.3 Added OddNumbersExterminator class and Junit test of exterminate method
+
+[33mcommit 7a4fdf750acf3f585e268f9674e65c0500faea9d[m
+Author: Jaszmijee <jaszmije@gmail.com>
+Date:   Thu Oct 13 11:12:00 2022 +0200
+
+    6.2 First unit test, ! see comment in Calculator class
+
+[33mcommit e788646514dc3a7e3f126021eee0ef8402f4ca56[m
+Author: Jaszmijee <jaszmije@gmail.com>
+Date:   Wed Oct 12 11:22:23 2022 +0200
+
+    6.1 Added kodilla-testing module
+
+[33mcommit 8c5e81f643df319e31f44524070807aa0675ec1b[m
+Author: Jaszmijee <jaszmije@gmail.com>
+Date:   Mon Oct 3 11:10:01 2022 +0200
+
+    First commit
