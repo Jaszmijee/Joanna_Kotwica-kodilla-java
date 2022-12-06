@@ -1,12 +1,7 @@
 package com.kodilla.kodilla.hibernate.tasklist;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 public class TaskListDaoTestSuite {
@@ -14,6 +9,7 @@ public class TaskListDaoTestSuite {
     @Autowired
     private TaskListDao taskListDao;
 
+/*    @Disabled
     @Test
     public void testFindByListName() {
         // Given
@@ -29,9 +25,9 @@ public class TaskListDaoTestSuite {
         //CleanUp
         int taskListId = taskList.getId();
         taskListDao.deleteById(taskListId);
-    }
+    }*/
 
-    @Test
+   /* @Test
     public void testFindByListName1() {
         // Given
         TaskList taskList = new TaskList("Test: List_Name", "Test: List_Description");
@@ -48,6 +44,6 @@ public class TaskListDaoTestSuite {
         //CleanUp
         int taskListId = taskList.getId();
         taskListDao.deleteById(taskListId);
-    }
+    }*/
 }
 
