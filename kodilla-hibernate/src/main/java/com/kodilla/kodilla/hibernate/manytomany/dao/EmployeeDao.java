@@ -1,6 +1,6 @@
 package com.kodilla.kodilla.hibernate.manytomany.dao;
 
-import com.kodilla.kodilla.hibernate.manytomany.Company;
+import com.kodilla.kodilla.hibernate.manytomany.Employee;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -11,8 +11,9 @@ import java.util.List;
 
 @Transactional
 @Repository
-public interface CompanyDao extends CrudRepository<Company, Integer> {
+public interface EmployeeDao extends CrudRepository<Employee, Integer> {
 
     @Query(nativeQuery = true)
-    List<Company> retrieveNameStartingWith(@Param("COMPANY_SHORT_NAME") String shortname);
+    List<Employee> retrieveLastName(@Param("LASTNAME") String lastname);
+
 }
