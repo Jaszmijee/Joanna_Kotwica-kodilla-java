@@ -16,10 +16,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 class TaskFinancialDetailsDaoTestSuite {
 
-
     @Autowired
     private TaskFinancialDetailsDao taskFinancialDetailsDao;
-
 
     @Test
     void testFindByPaid() {
