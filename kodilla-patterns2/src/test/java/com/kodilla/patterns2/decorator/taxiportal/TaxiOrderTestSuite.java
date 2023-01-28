@@ -127,6 +127,6 @@ class TaxiOrderTestSuite {                               // [5]
         //When
         String description = theOrder.getDescription();
         //Then
-        assertEquals("Drive a course by Taxi Network express service variant VIP + child seat", description);
+        assertEquals("Drive a course by Taxi Network + express service variant VIP + child seat", description);
     }
 }

@@ -13,7 +13,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework.boot:spring-boot-starter-aop:3.0.2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
