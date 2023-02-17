@@ -110,7 +110,7 @@ public class CrudAppTestSuite {
         return result;
     }
 
-    private void deleteFromCrud(String taskName) {
+    private void deleteFromCrud(String taskName) throws InterruptedException {
         driver.navigate().refresh();
         while (!driver.findElement(By.xpath("//select[1]")).isDisplayed()) ;
 
@@ -123,7 +123,8 @@ public class CrudAppTestSuite {
                     WebElement buttonDeleteFromCrud =
                             theForm.findElement(By.xpath(".//button[text()= \"Delete\"]"));
                     buttonDeleteFromCrud.click();
-                });
+                                   });
+        Thread.sleep(5000);
     }
 
     @Test
